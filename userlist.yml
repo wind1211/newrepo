@@ -1,0 +1,8 @@
+---
+userlist:
+    - user: test1
+      pass: test1
+    - user: test2
+      pass: test2
+    - user: test3
+      pass: test3

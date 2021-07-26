@@ -1,0 +1,12 @@
+---
+- hosts: tso.bmc.local
+  remote_user: root
+  vars_files:
+     - userlist.yml
+  tasks:
+   - name: create new user
+     user:
+        name: "{{ item.user }}"
+        password: "{{ 'item.pass'|password_hash('sha512') }}"
+        state: present
+     loop: "{{ userlist }}"
